@@ -6,9 +6,14 @@ import App from './App';
 
 injectGlobal`
   body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+  }
+  #root {
+    flex: 1;
   }
 `
 
