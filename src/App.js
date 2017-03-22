@@ -5,11 +5,14 @@ import {
   Link
 } from 'react-router-dom'
 import styled, { keyframes } from 'styled-components'
-import ThirdParty from './pages/ThirdParty'
-import PassedProps from './pages/PassedProps'
-import AdaptingProps from './pages/AdaptingProps'
-import OverridingStyles from './pages/OverridingStyles'
-import HoverState from './pages/HoverState'
+
+import PassedProps from './pages/01PassedProps'
+import AdaptingProps from './pages/02AdaptingProps'
+import HoverState from './pages/03HoverState'
+import OverridingStyles from './pages/04OverridingStyles'
+import ThirdParty from './pages/05ThirdParty'
+import ComposingStyles from './pages/06ComposingStyles'
+
 import logo from './reactStuttgartLogo.jpg'
 
 const AppWrapper = styled.div`
@@ -29,6 +32,7 @@ const ContentWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 `
 
 const DemoBox = styled.div`
@@ -60,11 +64,12 @@ class App extends Component {
           </AppHeader>
           <ContentWrapper>
             <Route exact path="/" component={ThirdParty}/>
-            <Route path="/thirdparty" component={ThirdParty}/>
-            <Route path="/passedprops" component={PassedProps}/>
-            <Route path="/adaptingprops" component={AdaptingProps}/>
-            <Route path="/overridingstyles" component={OverridingStyles}/>
-            <Route path="/hoverstate" component={HoverState}/>
+            <Route path="/01" component={PassedProps}/>
+            <Route path="/02" component={AdaptingProps}/>
+            <Route path="/03" component={HoverState}/>
+            <Route path="/04" component={OverridingStyles}/>
+            <Route path="/05" component={ThirdParty}/>
+            <Route path="/06" component={ComposingStyles}/>
           </ContentWrapper>  
         </AppWrapper>
       </Router>

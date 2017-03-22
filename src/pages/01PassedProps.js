@@ -16,8 +16,12 @@ class PassedProps extends Component {
     return (
       <div>
         <h2>Passed Props</h2>
+        <p>Styled components pass on all their props.</p>
         <p>
-          <Input placeholder="passedProps" type="text" /> 
+          <Input placeholder="Type in Text" size="20" type="text" /> 
+        </p>
+        <p>
+          <Link to="/02">next</Link>
         </p>
       </div>
     );
