@@ -13,8 +13,10 @@ const AppHeader = styled.div`
   color: white;
 `;
 
+const fontSize = '2em';
+
 const AppIntro = styled.p`
-  font-size: large;
+  font-size: ${fontSize};
 `;
 
 const rotate360 = keyframes`
