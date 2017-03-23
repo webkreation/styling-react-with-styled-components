@@ -9,7 +9,7 @@ injectGlobal`
     display: flex;
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     overflow: hidden;
   }
   #root {

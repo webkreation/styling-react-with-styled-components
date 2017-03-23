@@ -1,29 +1,26 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import H2 from '../components/H2'
+import Next from '../components/Next' 
 import Button from '../components/Button'
-import { Link } from 'react-router-dom'
+
 
 const UppercaseButton = styled(Button)`
   text-transform: uppercase;
   border: 10px solid green;
-  border-radius: initial;
 `
 
-class PassedProps extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Overriding Component Styles</h2>
-        <p>
-          <Button>Button</Button>
-          <UppercaseButton>Button</UppercaseButton>
-        </p>
-        <p>
-          <Link to="/05">next</Link>
-        </p>
-      </div>
-    );
-  }
+const PassedProps = () => {
+  return (
+    <div>
+      <H2>Overriding Component Styles</H2>
+      <p>
+        <Button>Button</Button>
+        <UppercaseButton>Button Uppercase Border</UppercaseButton>
+      </p>
+      <Next nextPage="/05"/>
+    </div>
+  );
 }
 
 export default PassedProps;

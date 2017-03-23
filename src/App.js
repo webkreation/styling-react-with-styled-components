@@ -11,7 +11,9 @@ import AdaptingProps from './pages/02AdaptingProps'
 import HoverState from './pages/03HoverState'
 import OverridingStyles from './pages/04OverridingStyles'
 import ThirdParty from './pages/05ThirdParty'
-import ComposingStyles from './pages/06ComposingStyles'
+import Theming from './pages/06Theming'
+import Theming2 from './pages/07Theming2'
+
 
 import logo from './reactStuttgartLogo.jpg'
 
@@ -22,10 +24,12 @@ const AppWrapper = styled.div`
 
 const AppHeader = styled.div`
   flex: 1;
-  background-color: #222;
-  height: 200px;
-  padding: 20px;
+  background-color: #2f3141;
+  padding: 10px;
   color: white;
+
+  display: flex;
+  justify-content: center;
 `
 
 const ContentWrapper = styled.div`
@@ -50,7 +54,7 @@ const rotate360 = keyframes`
 
 const Logo = styled.img`
   animation: ${rotate360} infinite 20s linear;
-  height: 80px;
+  height: 40px;
 `
 
 class App extends Component {
@@ -60,7 +64,6 @@ class App extends Component {
         <AppWrapper>
           <AppHeader>
             <Logo src={logo} alt="logo" />
-            <h2>Welcome to ReactStuttgart</h2>
           </AppHeader>
           <ContentWrapper>
             <Route exact path="/" component={ThirdParty}/>
@@ -69,7 +72,8 @@ class App extends Component {
             <Route path="/03" component={HoverState}/>
             <Route path="/04" component={OverridingStyles}/>
             <Route path="/05" component={ThirdParty}/>
-            <Route path="/06" component={ComposingStyles}/>
+            <Route path="/06" component={Theming}/>
+            <Route path="/07" component={Theming2}/>
           </ContentWrapper>  
         </AppWrapper>
       </Router>

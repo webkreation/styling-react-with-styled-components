@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import H2 from '../components/H2'
+import Next from '../components/Next'
 
 const Input = styled.input`
   font-size: 1.25em;
@@ -15,14 +16,12 @@ class PassedProps extends Component {
   render() {
     return (
       <div>
-        <h2>Passed Props</h2>
+        <H2>Passed Props</H2>
         <p>Styled components pass on all their props.</p>
         <p>
           <Input placeholder="Type in Text" size="20" type="text" /> 
         </p>
-        <p>
-          <Link to="/02">next</Link>
-        </p>
+        <Next nextPage="/02"/>
       </div>
     );
   }

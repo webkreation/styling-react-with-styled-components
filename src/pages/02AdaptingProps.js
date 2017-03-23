@@ -1,36 +1,34 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import H2 from '../components/H2'
+import Next from '../components/Next' 
 
 
 const Button = styled.button`
   /* Adapt the colors based on primary prop */
   display: block;
-  background: ${props => props.delete ? 'red' : 'white'};
-  color: ${props => props.delete ? 'white' : 'black'};
+  background: ${props => props.action ? 'green' : '#00D8FF'};
+  color: ${props => props.action ? 'white' : 'black'};
+  color: white;
+  border: none;
+  border-radius: 0.25em;
   font-size: ${props => props.bigger ? '2em' : '1em'};
+  padding: 0.5em 1em;
   margin: 1em 0;
-  padding: 0.25em 1em;
-  border: 2px solid black;
-  border-radius: 3px;
 `;
 
-class PassedProps extends Component {
-  render() {
+const PassedProps = () => {
     return (
       <div>
-        <h2>Adapting based on props</h2>
+        <H2>Adapting based on props</H2>
         <p>
           <Button>Normal</Button>
-          <Button delete>Delete Content</Button>
-          <Button delete bigger>Delete Bigger Content</Button>
+          <Button action>Buy now</Button>
+          <Button action bigger>Buy now bigger</Button>
         </p>
-        <p>
-          <Link to="/03">next</Link>
-        </p>
+        <Next nextPage="/03"/>
       </div>
     );
-  }
 }
 
 export default PassedProps;

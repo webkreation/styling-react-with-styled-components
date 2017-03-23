@@ -1,30 +1,33 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
+import H2 from '../components/H2'
+import Next from '../components/Next' 
+import Button from '../components/Button'
 import { Link } from 'react-router-dom';
 
 const StyledLink = styled(Link)`
+  display: block;
   background-color: red;
   color: white;
   padding: 10px;
+  text-align: center;
+  margin: 1em 0;
+  text-decoration: none;
 `;
 
-class ThirdPartyComponents extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Third-party components</h2>
-        <p>
-          <Link to="/">Standard, unstyled Link from React-Router</Link> 
-        </p>
-        <p>
-          <StyledLink to="/02">Style Third-party component</StyledLink>
-        </p>
-        <p>
-          <Link to="/06">next</Link>
-        </p>
-      </div>
-    );
-  }
+const ThirdPartyComponents = () => {
+  return (
+    <div>
+      <H2>Third-party components</H2>
+      <p>
+        <Link to="/">Standard, unstyled Link from React-Router</Link> 
+      </p>
+      <p>
+        <StyledLink to="/02">Style React-Router Link</StyledLink>
+      </p>
+      <Next nextPage="/06"/>
+    </div>
+  );
 }
 
 export default ThirdPartyComponents;
