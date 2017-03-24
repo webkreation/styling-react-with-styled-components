@@ -66,8 +66,7 @@ class App extends Component {
             <Logo src={logo} alt="logo" />
           </AppHeader>
           <ContentWrapper>
-            <Route exact path="/" component={ThirdParty}/>
-            <Route path="/01" component={PassedProps}/>
+            <Route path="/" component={PassedProps}/>
             <Route path="/02" component={AdaptingProps}/>
             <Route path="/03" component={HoverState}/>
             <Route path="/04" component={OverridingStyles}/>

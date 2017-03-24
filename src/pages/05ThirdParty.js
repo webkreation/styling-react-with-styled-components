@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
 const ThirdPartyComponents = () => {
   return (
     <div>
-      <H2>Third-party components</H2>
+      <H2>Styling third-party components</H2>
       <p>
         <Link to="/">Standard, unstyled Link from React-Router</Link> 
       </p>
