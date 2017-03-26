@@ -9,7 +9,6 @@ const Button = styled.button`
   display: block;
   background: ${props => props.action ? 'green' : '#00D8FF'};
   color: ${props => props.action ? 'white' : 'black'};
-  color: white;
   border: none;
   border-radius: 0.25em;
   font-size: ${props => props.bigger ? '2em' : '1em'};
